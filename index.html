@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Processor</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section id="input-section">
+      <h1>Text Processor</h1>
+      <input
+        type="text"
+        id="student-number-input"
+        placeholder="Enter the student number"
+      />
+      <textarea
+        id="input-textarea"
+        placeholder="Enter the text here"
+      ></textarea>
+      <div class="btn-group">
+        <a href="#output-section"
+          ><button id="generate-button">Generate</button></a
+        >
+        <button id="clear-button">Clear</button>
+      </div>
+    </section>
+
+    <section id="output-section" class="output-section">
+      <h2>Generated Text</h2>
+      <div class="output-textarea" id="output-textarea">
+        <p class="generated-text" id="generated-text"></p>
+      </div>
+      <!-- <textarea id="output-textarea" class="output-textarea" placeholder="Your processed text will generate here"></textarea> -->
+      <a href="#input-section"><button id="back-to-top-button">Top</button></a>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
