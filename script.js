@@ -4,7 +4,6 @@ document
   .getElementById("generate-button")
   .addEventListener("click", generateText);
 document.getElementById("clear-button").addEventListener("click", clearData);
-document.getElementById("copy-button").addEventListener("click", copyText);
 
 function generateText() {
 
