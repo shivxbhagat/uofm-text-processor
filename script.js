@@ -19,7 +19,7 @@ function generateText() {
   if (studentNumber.length != 9) {
     alert("Please enter a valid student number.");
     clearData();
-  }
+  } else {
 
   var dataLines = inputText.split("\n");
 
@@ -62,6 +62,7 @@ outputText += "</table>";
   //change the innerHTML of the output-textarea
 
   document.getElementById("generated-text").innerHTML = outputText;
+  }
 }
 
 function clearData() {
