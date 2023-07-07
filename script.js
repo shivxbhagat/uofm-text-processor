@@ -44,6 +44,8 @@ function generateText() {
   //generate output text
   outputText = "<table><tr><th colspan=\"2\">" + schoolName + "</th></tr>";
 for (let i = 0; i < allCoursesCode.length; i++) {
+
+  if(allCoursesName[i] !== undefined){
   outputText +=
     "<tr><td>" +
     allCoursesCode[i] +
@@ -56,6 +58,7 @@ for (let i = 0; i < allCoursesCode.length; i++) {
     " " +
     studentNumber +
     "</b>)</td></tr>";
+  }
 }
 outputText += "</table>"; 
   //   document.getElementById("output-textarea").value = outputText;
