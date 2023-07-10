@@ -62,13 +62,18 @@ button {
 }
 
 
-
 td,th {
   text-align: left;
 }
 
-table {
+table{
+  width: 1000px;
+  height: auto;
   border-collapse: collapse;
-  width: fit-content;
-/*   border: 1.5px solid black; */
+  overflow-x:auto;
 }
+
+/* td,th {
+  width: fit-content;
+  border: 1.5px solid black;
+} */
