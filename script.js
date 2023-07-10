@@ -4,6 +4,7 @@ document
   .getElementById("generate-button")
   .addEventListener("click", generateText);
 document.getElementById("clear-button").addEventListener("click", clearData);
+document.getElementById("copy-button").addEventListener("click", copyText);
 
 function generateText() {
 
@@ -18,7 +19,7 @@ function generateText() {
   if (studentNumber.length != 9) {
     alert("Please enter a valid student number.");
     clearData();
-  } else {
+  }
 
   var dataLines = inputText.split("\n");
 
@@ -32,7 +33,7 @@ function generateText() {
 
   //separate courses into arrays
   for (let i = 1; i < dataLines.length; i++) {
-    if(dataLines[i].includes("Comments:") || dataLines[i].includes("Attributes:")) continue;
+    if(dataLines[i].includes("Comments:") || dataLines[i].includes("Attributes:") || dataLines[i].includes("SENT TO DEPARTMENT")) continue;
       var courses = dataLines[i].split("\t");
       allCoursesCode.push(courses[0]);
       allCoursesName.push(courses[1]);
@@ -43,8 +44,6 @@ function generateText() {
   //generate output text
   outputText = "<table><tr><th colspan=\"2\">" + schoolName + "</th></tr>";
 for (let i = 0; i < allCoursesCode.length; i++) {
-
-  if(allCoursesName[i] !== undefined){
   outputText +=
     "<tr><td>" +
     allCoursesCode[i] +
@@ -57,14 +56,12 @@ for (let i = 0; i < allCoursesCode.length; i++) {
     " " +
     studentNumber +
     "</b>)</td></tr>";
-  }
 }
 outputText += "</table>"; 
   //   document.getElementById("output-textarea").value = outputText;
   //change the innerHTML of the output-textarea
 
   document.getElementById("generated-text").innerHTML = outputText;
-  }
 }
 
 function clearData() {
