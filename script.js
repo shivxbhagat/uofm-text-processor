@@ -48,7 +48,7 @@ for (let i = 0; i < allCoursesCode.length; i++) {
   outputText +=
     "<tr><td>" +
     allCoursesCode[i] +
-    "</td><td>&emsp;&emsp;" +
+    "</td><td>" +
     allCoursesName[i] +
     " (filename: <b>" +
     schoolCode +
