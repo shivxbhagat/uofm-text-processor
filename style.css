@@ -69,5 +69,6 @@ td,th {
 
 table {
   border-collapse: collapse;
-  width: fit-content;
+  /* width: fit-content; */
+  border: 1.5px solid black;
 }
