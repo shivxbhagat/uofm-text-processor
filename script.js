@@ -36,7 +36,7 @@ function generateText() {
   //separate courses into arrays
   for (let i = 1; i < dataLines.length; i++) {
     // if(dataLines[i].includes("Comments:") || dataLines[i].includes("Attributes:") || dataLines[i].includes("SENT TO DEPARTMENT")) continue;
-      if(dataLines[i].includes("Comments:") || dataLines[i].includes("Attributes:") || dataLines[i].includes("SENT TO DEPARTMENT") || (dataLines[i] == "")) continue;
+      if(dataLines[i].includes("Comments:") || dataLines[i].includes("Attributes:") || dataLines[i].includes("SENT TO DEPARTMENT") || (dataLines[i] == "") || dataLines[i].includes("Where")) continue;
       var courses = dataLines[i].split("\t");
       allCoursesCode.push(courses[0]);
       allCoursesName.push(courses[1]);
