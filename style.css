@@ -87,3 +87,30 @@ table {
   width: fit-content;
   border: 1.5px solid black;
 } */
+
+footer {
+  background-color: #3b3b3b;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+#a-github{
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+#a-email{
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+#a-github:hover, #a-email:hover{
+  color: #4caf50;
+}
+
