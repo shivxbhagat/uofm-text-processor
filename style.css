@@ -41,6 +41,10 @@ button {
   background-color: #f2f2f2;
 }
 
+.generated-text-h2{
+  margin-bottom: 0;
+}
+
 .info-for-copying {
   margin-top: 0;
 }
