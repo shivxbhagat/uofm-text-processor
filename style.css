@@ -41,6 +41,10 @@ button {
   background-color: #f2f2f2;
 }
 
+.info-for-copying{
+  margin-top: 0;
+}
+
 .output-textarea {
   width: 85%;
   height: 70%;
@@ -60,6 +64,10 @@ button {
 }
 
 .btn-group {
+  margin-bottom: 0.75rem;
+}
+
+#input-section {
   margin-bottom: 0.75rem;
 }
 
