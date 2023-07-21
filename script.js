@@ -1,6 +1,6 @@
-// @author - Shiv Bhagat : https://github.com/shivxbhagat/ 
+// @author - Shiv Bhagat : https://github.com/shivxbhagat/
 
-'use strict'
+"use strict";
 
 document
   .getElementById("generate-button")
@@ -9,9 +9,6 @@ document.getElementById("clear-button").addEventListener("click", clearData);
 // document.getElementById("copy-button").addEventListener("click", copyText);
 
 function generateText() {
-
-
-
   var inputText = document.getElementById("input-textarea").value;
   var studentNumber = document.getElementById("student-number-input").value;
   var schoolCode = "";
@@ -36,33 +33,36 @@ function generateText() {
   //separate courses into arrays
   for (let i = 1; i < dataLines.length; i++) {
     // if(dataLines[i].includes("Comments:") || dataLines[i].includes("Attributes:") || dataLines[i].includes("SENT TO DEPARTMENT")) continue;
-      if(dataLines[i].includes("Comments:") || dataLines[i].includes("Attributes:") || dataLines[i].includes("SENT TO DEPARTMENT") || (dataLines[i] == "") || dataLines[i].includes("Where")) continue;
-      var courses = dataLines[i].split("\t");
-      allCoursesCode.push(courses[0]);
-      allCoursesName.push(courses[1]);
-    
-    
+    if (
+      dataLines[i].includes("Comments:") ||
+      dataLines[i].includes("Attributes:") ||
+      dataLines[i].includes("SENT TO DEPARTMENT") ||
+      dataLines[i] == "" ||
+      dataLines[i].includes("Where")
+    )
+      continue;
+    var courses = dataLines[i].split("\t");
+    allCoursesCode.push(courses[0]);
+    allCoursesName.push(courses[1]);
   }
 
   //generate output text
-  outputText = "<table><tr><th colspan=\"2\">" + schoolName + "</th></tr>";
-for (let i = 0; i < allCoursesCode.length; i++) {
-  
-  outputText +=
-    "<tr><td>" +
-    allCoursesCode[i] +
-    "</td><td>" +
-    allCoursesName[i] +
-    " (filename: <b>" +
-    schoolCode +
-    " " +
-    allCoursesCode[i] +
-    " " +
-    studentNumber +
-    "</b>)</td></tr>";
-  
-}
-outputText += "</table>"; 
+  outputText = '<table><tr><th colspan="2">' + schoolName + "</th></tr>";
+  for (let i = 0; i < allCoursesCode.length; i++) {
+    outputText +=
+      "<tr><td>" +
+      allCoursesCode[i] +
+      "</td><td>" +
+      allCoursesName[i] +
+      " (filename: <b>" +
+      schoolCode +
+      " " +
+      allCoursesCode[i] +
+      " " +
+      studentNumber +
+      "</b>)</td></tr>";
+  }
+  outputText += "</table>";
   //   document.getElementById("output-textarea").value = outputText;
   //change the innerHTML of the output-textarea
 

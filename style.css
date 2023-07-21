@@ -41,7 +41,7 @@ button {
   background-color: #f2f2f2;
 }
 
-.info-for-copying{
+.info-for-copying {
   margin-top: 0;
 }
 
@@ -71,16 +71,16 @@ button {
   margin-bottom: 0.75rem;
 }
 
-
-td,th {
+td,
+th {
   text-align: left;
 }
 
-table{
+table {
   width: 1000px;
   height: auto;
   border-collapse: collapse;
-  overflow-x:auto;
+  overflow-x: auto;
 }
 
 /* td,th {
