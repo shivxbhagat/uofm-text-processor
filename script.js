@@ -72,5 +72,6 @@ function generateText() {
 function clearData() {
   document.getElementById("student-number-input").value = "";
   document.getElementById("input-textarea").value = "";
-  document.getElementById("output-textarea").value = "";
+  // document.getElementById("output-textarea").value = "";
+  document.getElementById("generated-text").innerHTML = "";
 }
