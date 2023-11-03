@@ -18,6 +18,7 @@ function generateText() {
   if (studentNumber.length != 9) {
     alert("Please enter a valid student number.");
     clearData();
+    location.reload();
   }
 
   var dataLines = inputText.split("\n");
