@@ -1,0 +1,140 @@
+CBC022 - Trinity Western University
+MATH 105	PRE-CALCULUS MATHEMATICS	B+	TR 9996	06/11 INFO REQ (STUDENT)	0.0	A	S	B+	
+CBC007 - University of Victoria
+POLI 202	INTRO POLITICAL THEORY	IP	TR 9996	06/11 INFO REQ (STUDENT)	0.0	A	S	IP	
+HSTR 314A	BECOMING VICTORIANS BRITAIN	IP	TR 9996	06/11 INFO REQ (STUDENT)	0.0	A	S	IP	
+HSTR 240A	EURO RENAISSANCE TO FRENCH REV	IP	TR 9996	06/11 INFO REQ (STUDENT)	0.0	A	S	IP	
+POLI 103	THE WORLD OF POLITICS	C+	TR 9996	06/11 INFO REQ (STUDENT)	0.0	A	S	C+	
+POLI 101	INTRO CANADIAN POLITICS	B+	TR 9996	06/11 INFO REQ (STUDENT)	0.0	A	S	B+	
+GRS 102	DISCOVERING THE ANCIENT ROMANS	A	TR 9996	06/11 INFO REQ (STUDENT)	0.0	A	S	A	
+POLI 211	EURO INTEGRATION & UNION	IP	TR 9996	06/11 INFO REQ (STUDENT)	0.0	A	S	IP	
+ENGL 366C	SHAKESPEARE: COMEDY & ROMANCE	B	TR 9996	06/11 INFO REQ (STUDENT)
+
+a numschools counter
+a numcourses counter for each school
+
+one full array of data stored
+one multidimentional array of data stored
+eg : schoolVsCourse[0][0] = "CBC022 - Trinity Western University"
+eg : schoolVsCourse[0][1] = "MATH 105	PRE-CALCULUS MATHEMATICS	B+	TR 9996	06/11 INFO REQ (STUDENT)	0.0	A	S	B+	"
+eg : schoolVsCourse[1][0] = "CBC007 - University of Victoria"
+eg : schoolVsCourse[1][1] = "POLI 202	INTRO POLITICAL THEORY	IP	TR 9996	06/11 INFO REQ (STUDENT)	0.0	A	S	IP	"
+eg : schoolVsCourse[1][2] = "HSTR 314A	BECOMING VICTORIANS BRITAIN	IP	TR 9996	06/11 INFO REQ (STUDENT)	0.0	A	S	IP	"
+.
+.
+.
+schoolVsCourse[[schoolCode][schoolName]][[courseCode][courseName]]
+
+[0][0][0] : School CODE
+[0][0][1] : School Name
+[0][1][0] : Course Code 1
+[0][1][1] : Course Name 1
+[0][2][0] : Course Code 2
+[0][2][1] : Course Name 2
+....  and So on
+
+
+[
+    [
+        [schoolCode][schoolName]
+        [
+            [courseCode][courseName]
+            [courseCode][courseName]
+            [courseCode][courseName]
+            [courseCode][courseName]
+            [courseCode][courseName]
+        ]
+    ]
+    [
+        [schoolCode][schoolName]
+        [
+            [courseCode][courseName]
+            [courseCode][courseName]
+            [courseCode][courseName]
+            [courseCode][courseName]
+            [courseCode][courseName]
+        ]
+]
+
+let schoolVsCourse = [];
+let schoolCounter = -1;
+
+for (int i = 0; i < data.length; i++) {
+
+    if (data[i].includes(" - ") && data[i].split(" - ")[0]lenth == 6){
+
+        //-1 check if all TR 9997 in school with no courses for outlines
+        if (schoolCounter != -1 && noCourse == true){
+            schoolCounter--;
+        }
+
+        schoolCounter++;
+        schoolVsCourse[schoolCounter] = [];
+        schoolVsCourse[schoolCounter][0] = [];
+        let school = data[i].split(" - ");
+        schoolVsCourse[schoolCounter][0][0] = school[0];
+        schoolVsCourse[schoolCounter][0][1] = school[1];
+
+        let courseCounter = 1;
+        let noCourse = true;
+    }
+
+    else if (
+        dataLines[i].includes("Comments:") ||
+			dataLines[i].includes("Attributes:") ||
+			dataLines[i].includes("SENT TO DEPARTMENT") ||
+			dataLines[i] == "" ||
+			dataLines[i].includes("Where")
+    ){
+        continue;
+    }
+
+    else {
+        noCourse = false;
+        schoolVsCourse[schoolCounter][courseCounter] = [];
+
+        var course = dataLines[i].split("\t");
+        schoolVsCourse[schoolCounter][courseCounter][0] = course[0];
+        schoolVsCourse[schoolCounter][courseCounter][1] = course[1];
+        courseCounter++;
+    }
+}
+
+
+//print in the table form
+
+let outputText = "<table>";
+
+for (let i = 0; i < schoolCounter; i++) {
+    outputText +=
+        <tr><th colspan="2"><b><u>' + schoolVsCourse[i][0][1] + "</u></b></th></tr>"; //school name
+        let j = 1;
+        while (schoolVsCourse[i][j][0] != undefined) {
+            outputText +=
+               "<tr><td>" +
+                    schoolVsCourse[schoolCode][j][0] + //course code
+                    "</td><td>" +
+                    schoolVsCourse[schoolCode][j][1] + //course name
+                    " (filename: <b>" + //filename format
+                        schoolVsCourse[i][0][0] +
+                        " " +
+                        schoolVsCourse[schoolCode][j][0] +
+                        " " +
+                        studentNumber +
+                        "</b>)</td></tr>";
+            j++;
+        }
+}
+outputText += "</table>";
+
+
+//var - global
+//let - local
+
+
+//student number check (check for 9 digits as well as not included e in the student number)
+  if (studentNumber.length != 9 && studentNumber.includes("e") == false) {
+    alert("Please enter a valid student number.");
+    clearData();
+    location.reload();
+  }

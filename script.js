@@ -3,76 +3,112 @@
 "use strict";
 
 document
-  .getElementById("generate-button")
-  .addEventListener("click", generateText);
+	.getElementById("generate-button")
+	.addEventListener("click", generateText);
 document.getElementById("clear-button").addEventListener("click", clearData);
 // document.getElementById("copy-button").addEventListener("click", copyText);
 
 function generateText() {
-  var inputText = document.getElementById("input-textarea").value;
-  var studentNumber = document.getElementById("student-number-input").value;
-  var schoolCode = "";
-  var schoolName = "";
-  var outputText = "";
+	var inputText = document.getElementById("input-textarea").value;
+	var studentNumber = document.getElementById("student-number-input").value;
 
-  if (studentNumber.length != 9) {
-    alert("Please enter a valid student number.");
-    clearData();
-    location.reload();
-  }
+	var outputText = "";
 
-  var dataLines = inputText.split("\n");
+	//student number check (check for 9 digits as well as not included e in the student number)
+	if (studentNumber.length != 9 && studentNumber.includes("e") == false) {
+		alert("Please enter a valid student number.");
+		clearData();
+		location.reload();
+	}
 
-  //separate school code and name
-  let school = dataLines[0].split(" - ");
-  schoolCode = school[0];
-  schoolName = school[1];
+	var dataLines = inputText.split("\n");
 
-  var allCoursesCode = [];
-  var allCoursesName = [];
+	var schoolVsCourse = [];
+	var schoolCounter = -1;
+	var courseCounter;
+	var noCourse;
 
-  //separate courses into arrays
-  for (let i = 1; i < dataLines.length; i++) {
-    // if(dataLines[i].includes("Comments:") || dataLines[i].includes("Attributes:") || dataLines[i].includes("SENT TO DEPARTMENT")) continue;
-    if (
-      dataLines[i].includes("Comments:") ||
-      dataLines[i].includes("Attributes:") ||
-      dataLines[i].includes("SENT TO DEPARTMENT") ||
-      dataLines[i] == "" ||
-      dataLines[i].includes("Where")
-    )
-      continue;
-    var courses = dataLines[i].split("\t");
-    allCoursesCode.push(courses[0]);
-    allCoursesName.push(courses[1]);
-  }
+	//separate the data and store it in schoolVsCourse array
+	for (let i = 0; i < dataLines.length; i++) {
+		if (
+			dataLines[i].includes(" - ") &&
+			dataLines[i].split(" - ")[0].length == 6
+		) {
+			//-1 check if all TR 9997 in school with no courses for outlines
+			if (schoolCounter != -1 && noCourse == true) {
+				schoolCounter--;
+			}
 
-  //generate output text
-  outputText = '<table><tr><th colspan="2">' + schoolName + "</th></tr>";
-  for (let i = 0; i < allCoursesCode.length; i++) {
-    outputText +=
-      "<tr><td>" +
-      allCoursesCode[i] +
-      "</td><td>" +
-      allCoursesName[i] +
-      " (filename: <b>" +
-      schoolCode +
-      " " +
-      allCoursesCode[i] +
-      " " +
-      studentNumber +
-      "</b>)</td></tr>";
-  }
-  outputText += "</table>";
-  //   document.getElementById("output-textarea").value = outputText;
-  //change the innerHTML of the output-textarea
+			schoolCounter++;
+			schoolVsCourse[schoolCounter] = [];
+			schoolVsCourse[schoolCounter][0] = [];
+			let school = dataLines[i].split(" - ");
+			schoolVsCourse[schoolCounter][0][0] = school[0];
+			schoolVsCourse[schoolCounter][0][1] = school[1];
 
-  document.getElementById("generated-text").innerHTML = outputText;
+			courseCounter = 1;
+			noCourse = true;
+		} else if (
+			dataLines[i].includes("Comments:") ||
+			dataLines[i].includes("Attributes:") ||
+			dataLines[i].includes("SENT TO DEPARTMENT") ||
+			dataLines[i] == "" ||
+			dataLines[i].includes("Where") ||
+			dataLines[i].includes("9997") ||
+			dataLines[i].includes("9999") ||
+			dataLines[i].includes("No Credit")
+		) {
+			continue;
+		} else {
+			noCourse = false;
+			schoolVsCourse[schoolCounter][courseCounter] = [];
+
+			var course = dataLines[i].split("\t");
+			schoolVsCourse[schoolCounter][courseCounter][0] = course[0];
+			schoolVsCourse[schoolCounter][courseCounter][1] = course[1];
+			courseCounter++;
+		}
+	}
+
+	//generate output text
+	var outputText = "<table>";
+
+	for (let i = 0; i <= schoolCounter; i++) {
+		// console.log(outputText);
+		outputText +=
+			'<tr><th colspan="2"><b><u>' +
+			schoolVsCourse[i][0][1] +
+			"</u></b></th></tr>"; //school name
+		let j = 1;
+		while (schoolVsCourse[i][j] != undefined) {
+			outputText +=
+				"<tr><td>" +
+				schoolVsCourse[i][j][0] + //course code
+				"</td><td>" +
+				schoolVsCourse[i][j][1] + //course name
+				" (filename: <b>" + //filename format
+				schoolVsCourse[i][0][0] +
+				" " +
+				schoolVsCourse[i][j][0] +
+				" " +
+				studentNumber +
+				"</b>)</td></tr>";
+			j++;
+		}
+	}
+	outputText += "</table>";
+
+	// console.log(outputText);
+
+	//   document.getElementById("output-textarea").value = outputText;
+	//change the innerHTML of the output-textarea
+
+	document.getElementById("generated-text").innerHTML = outputText;
 }
 
 function clearData() {
-  document.getElementById("student-number-input").value = "";
-  document.getElementById("input-textarea").value = "";
-  // document.getElementById("output-textarea").value = "";
-  document.getElementById("generated-text").innerHTML = "";
+	document.getElementById("student-number-input").value = "";
+	document.getElementById("input-textarea").value = "";
+	// document.getElementById("output-textarea").value = "";
+	document.getElementById("generated-text").innerHTML = "";
 }
