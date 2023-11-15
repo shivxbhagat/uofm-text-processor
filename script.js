@@ -98,11 +98,8 @@ function generateText() {
 	}
 	outputText += "</table>";
 
-	// console.log(outputText);
-
 	//   document.getElementById("output-textarea").value = outputText;
 	//change the innerHTML of the output-textarea
-
 	document.getElementById("generated-text").innerHTML = outputText;
 }
 
