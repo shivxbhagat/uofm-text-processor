@@ -70,13 +70,18 @@ function generateText() {
 		}
 	}
 
+	//check for last school with no courses for outlines
+	if (schoolVsCourse[schoolCounter][1] == undefined) {
+		schoolCounter--;
+	}
+
 	//generate output text
-	var outputText = "<table>";
+	var outputText = "";
 
 	for (let i = 0; i <= schoolCounter; i++) {
 		// console.log(outputText);
 		outputText +=
-			'<tr><th colspan="2"><b><u>' +
+			'<table><tr><th colspan="2"><b><u>' +
 			schoolVsCourse[i][0][1] +
 			"</u></b></th></tr>"; //school name
 		let j = 1;
@@ -95,8 +100,8 @@ function generateText() {
 				"</b>)</td></tr>";
 			j++;
 		}
+		outputText += "</table><br>";
 	}
-	outputText += "</table>";
 
 	//   document.getElementById("output-textarea").value = outputText;
 	//change the innerHTML of the output-textarea
