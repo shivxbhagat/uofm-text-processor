@@ -2,48 +2,74 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Text Processor</title>
-    <link rel="stylesheet" href="./style.css" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-  </head>
-  <body>
-    <section id="input-section">
-      <h1>Text Processor</h1>
-      <input
-        type="number"
-        id="student-number-input"
-        placeholder="Enter the student number"
-      />
-      <textarea
-        id="input-textarea"
-        placeholder="Enter the text here"
-      ></textarea>
-      <div class="btn-group">
-        <a href="#output-section"
-          ><button id="generate-button">Generate</button></a
-        >
-        <button id="clear-button">Clear</button>
-      </div>
-    </section>
+	<head>
+		<title>Text Processor</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<section id="input-section">
+			<div class="header">
+				<h1>Text Processor</h1>
+				<i class="fa-solid fa-circle-info" id="info-btn"></i>
+			</div>
+			<input
+				type="number"
+				id="student-number-input"
+				placeholder="Enter the student number"
+			/>
+			<textarea
+				id="input-textarea"
+				placeholder="Enter the text here"
+			></textarea>
+			<div class="btn-group">
+				<a href="#output-section"
+					><button id="generate-button">Generate</button></a
+				>
+				<button id="clear-button">Clear</button>
+			</div>
+		</section>
 
-    <section id="output-section" class="output-section">
-      <h2 class="generated-text-h2">Generated Text</h2>
-      <br />
-      <h5 class="info-for-copying">
-        Copy from bottom of generated text to top (from ")" to first character
-        of School Name or Course Code)
-      </h5>
-      <div class="output-textarea" id="output-textarea">
-        <p class="generated-text" id="generated-text"></p>
-      </div>
-      <!-- <textarea id="output-textarea" class="output-textarea" placeholder="Your processed text will generate here"></textarea> -->
-      <a href="#input-section" id="input-section"><button id="back-to-top-button">Top</button></a>
-    </section>
-    <footer>
-      &copy; 2023 <a href="https://github.com/shivxbhagat" id="a-github" target="_blank">Shiv Bhagat</a> | Email: <a href="mailto:shivbhagat@icloud.com" id="a-email">shivbhagat@icloud.com</a>
-    </footer>
-    
-    <script src="./script.js"></script>
-  </body>
+		<section id="output-section" class="output-section">
+			<h2 class="generated-text-h2">Generated Text</h2>
+			<br />
+			<h5 class="info-for-copying">
+				Copy from bottom of generated text to top (from ")" to first
+				character of School Name or Course Code)
+			</h5>
+			<div class="output-textarea" id="output-textarea">
+				<p class="generated-text" id="generated-text"></p>
+			</div>
+			<!-- <textarea id="output-textarea" class="output-textarea" placeholder="Your processed text will generate here"></textarea> -->
+			<a href="#input-section" id="input-section"
+				><button id="back-to-top-button">Top</button></a
+			>
+		</section>
+		<footer>
+			&copy; 2023
+			<a
+				href="https://github.com/shivxbhagat"
+				id="a-github"
+				target="_blank"
+				>Shiv Bhagat</a
+			>
+			| Email:
+			<a href="mailto:shivbhagat@icloud.com" id="a-email"
+				>shivbhagat@icloud.com</a
+			>
+		</footer>
+
+		<script src="./script.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+	</body>
 </html>

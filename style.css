@@ -37,6 +37,27 @@ button {
 	font-size: 1em;
 }
 
+.header {
+	padding: 10px;
+	display: flex;
+}
+
+.header h1,
+.header i {
+	margin: 0;
+	padding: 0;
+}
+
+.header i {
+	margin-left: 20px;
+	padding-top: 5px;
+	font-size: larger;
+}
+
+.header i:hover {
+	cursor: pointer;
+}
+
 .output-section {
 	background-color: #f2f2f2;
 }
