@@ -12,8 +12,6 @@ function generateText() {
 	var inputText = document.getElementById("input-textarea").value;
 	var studentNumber = document.getElementById("student-number-input").value;
 
-	var outputText = "";
-
 	//student number check (check for 9 digits as well as not included e in the student number)
 	if (studentNumber.length != 9 && studentNumber.includes("e") == false) {
 		alert("Please enter a valid student number.");
