@@ -121,7 +121,7 @@ function driver() {
 	const driver = window.driver.js.driver;
 
 	const driverObj = driver({
-		allowClose: false,
+		allowClose: true,
 
 		onNextClick: () => {
 			document.getElementById("student-number-input").value = "001234567";
@@ -130,6 +130,11 @@ function driver() {
 			document.getElementById("generated-text").innerHTML =
 				'<table><tbody><tr><th colspan="2"><b><u>Trinity Western University</u></b></th></tr><tr><td>MATH 105</td><td>PRE-CALCULUS MATHEMATICS (filename: <b>CBC022 MATH 105 123456789</b>)</td></tr></tbody></table><br><table><tbody><tr><th colspan="2"><b><u>University of Victoria</u></b></th></tr><tr><td>POLI 202</td><td>INTRO POLITICAL THEORY (filename: <b>CBC007 POLI 202 123456789</b>)</td></tr><tr><td>HSTR 314A</td><td>BECOMING VICTORIANS BRITAIN (filename: <b>CBC007 HSTR 314A 123456789</b>)</td></tr><tr><td>HSTR 240A</td><td>EURO RENAISSANCE TO FRENCH REV (filename: <b>CBC007 HSTR 240A 123456789</b>)</td></tr><tr><td>POLI 103</td><td>THE WORLD OF POLITICS (filename: <b>CBC007 POLI 103 123456789</b>)</td></tr><tr><td>POLI 101</td><td>INTRO CANADIAN POLITICS (filename: <b>CBC007 POLI 101 123456789</b>)</td></tr><tr><td>GRS 102</td><td>DISCOVERING THE ANCIENT ROMANS (filename: <b>CBC007 GRS 102 123456789</b>)</td></tr><tr><td>POLI 211</td><td>EURO INTEGRATION &amp; UNION (filename: <b>CBC007 POLI 211 123456789</b>)</td></tr><tr><td>ENGL 366C</td><td>SHAKESPEARE: COMEDY &amp; ROMANCE (filename: <b>CBC007 ENGL 366C 123456789</b>)</td></tr></tbody></table><br>';
 			driverObj.moveNext();
+		},
+
+		onCloseClick: () => {
+			clearData();
+			driverObj.destroy();
 		},
 
 		steps: [
@@ -154,7 +159,7 @@ function driver() {
 				popover: {
 					title: "Step 2/4",
 					description:
-						"Copy and paste the school code and name, to be requested courses data from the aurora's trsansfer credit report here. Sample data is already filled in the text area.",
+						'Copy and paste the school code and name, to be requested courses data from the aurora\'s trsansfer credit report here.<img src = "./ss.png" style = "height: 100%; width:100%;" ></img> <br>Open the image in new to get a better view of what is to be selected. <br>Sample data is already filled in the text area.',
 				},
 			},
 			{
