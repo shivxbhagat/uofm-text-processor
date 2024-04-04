@@ -159,7 +159,7 @@ function driver() {
 				popover: {
 					title: "Step 2/4",
 					description:
-						'Copy and paste the school code and name, to be requested courses data from the aurora\'s trsansfer credit report here.<img src = "./ss.png" style = "height: 100%; width:100%;" ></img> <br>Open the image in new to get a better view of what is to be selected. <br>Sample data is already filled in the text area.',
+						'Copy and paste the school code and name, to be requested courses data from the aurora\'s trsansfer credit report here.<img src = "./ss.png" style = "height: 100%; width:100%;" ></img> <br>Open the image in new tab to get a better view of what is to be selected. <br>Sample data is already filled in the text area.',
 				},
 			},
 			{
