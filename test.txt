@@ -165,3 +165,80 @@ EBS 339J	RESEARCH METHODS IN EDUC	C	TR 9996	21/12 INFO REQ (STUDENT)	0.0	A	S	C
 EBS 351	STATS & PROBABILITY II	A	TR 9996	21/12 INFO REQ (STUDENT)	0.0	A	S	A	
 EBS 357	INTRO ATOMIC PHYS HEAT OPTICS	A	TR 9996	21/12 INFO REQ (STUDENT)	0.0	A	S	A	
 EBS 107	COMPUTER LITERACY	B	TR 9996	
+
+
+
+//for v2.0 
+
+University of Manitoba - Aurora
+Personal Information	Tab Corner Right	Enrolment & Academic Records	Tab Corner Right	Advisor Services	Tab Corner Right	Admission Services	Tab Corner Right	Student Reports	Tab Corner Right	Student Awards and Financial Aid	Tab Corner Right
+Transparent Image
+ 
+HELP | EXIT
+Statement of Transfer Credit
+ 	
+Apr 12, 2024 08:51 am
+Transparent Image
+
+Student #: 008030949
+Student Name: Mohammed Monju Monjurul Hoque
+Program: No Program Defined
+
+The University of Manitoba evaluates external courses for possible transfer credit on a course-by-course basis. Credit is determined based on review of detailed course outlines/syllabi by the applicable department or teaching unit, and is subject to final approval by the program of admission.
+
+Basis of Transfer Credit	U of M Transfer Credit Awarded
+Course No.	Description	Grade	Course No.	Description	Cr Hrs	R	Grade	Applied
+UMN005 - Minnesota State University
+ECON 201	PRIN OF MACROECONOMICS	B	ECON 1020	INTRO MACROECONOMICS	3.0	 	 	B	
+Attributes:	SS U1
+ENG 101	COMPOSITION	A-	ENGL 0930	ENG COMPOSITION	3.0	 	 	A	
+Attributes:	TW U1
+MATH 121	CALCULUS I	B	MATH 1500	INTRO CALCULUS	3.0	 	 	B	
+Attributes:	CALC M SA SC U1
+MATH 122	CALCULUS II	F	MATH 1700	CALCULUS 2	3.0	 	 	F	
+Attributes:	CALC M SA SC U1
+PHYS 221	GENERAL PHYSICS I	F	PHYS 1050	PHYSICS 1: MECHANICS	3.0	 	 	F	
+Attributes:	PHSG SA SC U1
+POL 111	UNITED STATES GOVERNMENT	C-	POLS 3XXX	TRANSFER 3000 LVL	3.0	 	 	C	
+Attributes:	SS
+PSYC 101	INTRODUCTORY PSYC I	A	PSYC 1200	INTRODUCTION	3.0	 	 	A	
+Attributes:	SS U1
+SOC 101	INTRO TO SOCIOLOGY	B-	SOC 1200	INTRODUCTION	3.0	 	 	B	
+Attributes:	SS U1 UKRA
+Courses Pending an Assessment Decision:
+UMN005 - Minnesota State University
+MATH 280	DISCRETE FOR COMP SCI I	D	TR 9996	08/03 INFO REQ (STUDENT)	0.0	A	S	D	
+HLTH 101	HEALTH & ENVIRONMENT	D+	TR 9996	08/03 INFO REQ (STUDENT)	0.0	A	S	D	
+EE 106	FUNDAMENTAL DIGITAL SYS	F	TR 9996	08/03 INFO REQ (STUDENT)	0.0	A	S	F	
+HLTH 101	HEALTH & ENVIRONMENT	A	TR 9996	08/03 INFO REQ (STUDENT)	0.0	A	S	A	
+MATH 113	TRIGONOMETRY	A	TR 9996	08/03 INFO REQ (STUDENT)	0.0	A	S	A	
+THEA 100	INTO TO THEATRE	B	TR 9996	08/03 INFO REQ (STUDENT)	0.0	A	S	B	
+PSYC 340	SOCIAL PSYCHOLOGY	B	TR 9996	08/03 INFO REQ (STUDENT)	0.0	A	S	B	
+MUSC 102	POP MUSIC USA: JAZZ BLUES	B	TR 9996	08/03 INFO REQ (STUDENT)	0.0	A	S	B	
+CIS 121	INTRO TO PROGRAMMING	F	TR 9996	08/03 INFO REQ (STUDENT)	0.0	A	S	F	
+GEOL 108	OCEANS OF THE WORLD	B-	TR 9996	08/03 INFO REQ (STUDENT)	0.0	A	S	B	
+BIOL 105	GENERAL BIOLOGY I	C	TR 9996	08/03 INFO REQ (STUDENT)	0.0	A	S	C	
+CIS 121	INTRO TO PROGRAMMING	F	TR 9996	08/03 INFO REQ (STUDENT)	0.0	A	S	F	
+Courses Not Awarded Credit:
+UMN005 - Minnesota State University
+ENG 271	TECHNICAL WRITING	B	ENGL 9994	INSUFFICIENT INFO	0.0	 	 	B	
+MATH 115	PRECALCULUS MATHEMATICS	D+	MATH 9999	NO CREDIT	0.0	 	 	D	
+
+Where sufficient overlap in course content does not exist, courses may be assigned unspecified (general) credit (e.g. PSYC 1XXX TRANSFER 1000 LVL).
+
+Courses transferred from external institutions (other than Department of English courses) do not satisfy the University of Manitoba's Written English Requirement, or Engineering Written Requirement list (WE), except by individual assessment. Further information regarding individual assessment of the Written English Requirement can be obtained by contacting the Dean's Office, Faculty of Arts, 3rd Floor Fletcher Argue. See Section 2.2 General Academic Regulations and Requirements in the Undergraduate Calendar.
+
+For current University of Manitoba students seeking external course study on a Letter of Permission, grade indicators are:
+LP: Course has been approved for external studies on a Letter of Permission.
+LP PN: Course is pending a program decision. Approval has not been granted.
+LP DN: Course has been denied for use towards your program of study.
+
+The R (Repeat) column is used to indicate courses that have been assessed against the University of Manitoba's Course Repeat regulations. External transfer courses with subsequent repeats prior to Fall 2016 should have an indicator of E (exclude) on all but the most recent attempt. An active course registration effective Fall 2016, forward, will have an A (include in GPA) repeat indicator applied to all but the highest attempt. M (manual) or S (system) simply identifies how the repeat indicator was applied.
+
+
+Transparent Image
+[ Select Another Program | Select Another ID | Select Another Student from the List ]
+
+RELEASE: 1.0
+
+© 2024 Ellucian Company L.P. and its affiliates.
