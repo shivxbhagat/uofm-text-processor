@@ -24,7 +24,7 @@ textarea {
 	height: 70%;
 	padding: 10px;
 	margin-bottom: 20px;
-	font-size: 1em;
+	font-size: 1rem;
 }
 
 button {
@@ -46,6 +46,10 @@ button {
 .header i {
 	margin: 0;
 	padding: 0;
+}
+
+.header h1 {
+	margin-bottom: 20px;
 }
 
 .header i {
