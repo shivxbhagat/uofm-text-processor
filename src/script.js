@@ -73,7 +73,8 @@ function generateEmail() {
 
 	//write email in new window
 	let email = window.open("", "_blank");
-	email.document.write(`<html
+	email.document.write(`
+	<html
 	xmlns:v="urn:schemas-microsoft-com:vml"
 	xmlns:o="urn:schemas-microsoft-com:office:office"
 	xmlns:w="urn:schemas-microsoft-com:office:word"
@@ -85,22 +86,7 @@ function generateEmail() {
 		<meta name="ProgId" content="Word.Document" />
 		<meta name="Generator" content="Microsoft Word 15" />
 		<meta name="Originator" content="Microsoft Word 15" />
-		<link
-			rel="File-List"
-			href="file:///C:/Users/bhagats1/AppData/Local/Temp/msohtmlclip1/01/clip_filelist.xml"
-		/>
-		<link
-			rel="Edit-Time-Data"
-			href="file:///C:/Users/bhagats1/AppData/Local/Temp/msohtmlclip1/01/clip_editdata.mso"
-		/>
-		<link
-			rel="themeData"
-			href="file:///C:/Users/bhagats1/AppData/Local/Temp/msohtmlclip1/01/clip_themedata.thmx"
-		/>
-		<link
-			rel="colorSchemeMapping"
-			href="file:///C:/Users/bhagats1/AppData/Local/Temp/msohtmlclip1/01/clip_colorschememapping.xml"
-		/>
+		
 		<style>
 			/* Font Definitions */
 			@font-face {
