@@ -72,8 +72,18 @@ function generateEmail() {
 	document.getElementById("generated-text").innerHTML = courseTable;
 
 	//write email in new window
-	let email = window.open("", "_blank");
-	email.document.write(`
+	writeEmail(studentNumber, studentName, schoolNames, courseTable);
+}
+
+function writeEmail(studentNumber, studentName, schoolNames, courseTable) {
+	if (
+		studentNumber !== undefined ||
+		studentName !== undefined ||
+		schoolNames !== undefined ||
+		courseTable !== undefined
+	) {
+		let email = window.open("", "_blank", "width=1200,height=800");
+		email.document.write(`
 	<html
 	xmlns:v="urn:schemas-microsoft-com:vml"
 	xmlns:o="urn:schemas-microsoft-com:office:office"
@@ -702,22 +712,6 @@ function generateEmail() {
 						mso-ansi-language: EN-CA;
 						mso-no-proof: yes;
 					"
-					><o:p>&nbsp;</o:p></span
-				></span
-			>
-		</p>
-
-		<p class="MsoNormal">
-			<span style="mso-bookmark: _MailAutoSig"
-				><span
-					lang="EN-CA"
-					style="
-						mso-fareast-font-family: 'Times New Roman';
-						mso-fareast-theme-font: minor-fareast;
-						mso-ligatures: none;
-						mso-ansi-language: EN-CA;
-						mso-no-proof: yes;
-					"
 					>Course information should be submitted as issued or created
 					by your previous institution.
 					<b>Student created outlines will not be accepted.</b>
@@ -1119,6 +1113,7 @@ function generateEmail() {
 	</body>
 </html>
 `);
+	}
 }
 
 function trimCourseData(coursesData) {
@@ -1212,7 +1207,7 @@ function generateCourseTable(
 	) {
 		for (let i = 0; i <= schoolCounter; i++) {
 			outputTable +=
-				'<table><tr><th colspan="2"><b><u>' +
+				'<table style = "width: 1000px;height: auto;border-collapse: collapse;overflow-x: auto;text-align: left;"><tr><th colspan="2"><b><u>' +
 				schoolVsCourseFiltered[i][0][1] +
 				"</u></b></th></tr>"; //school name
 			let j = 1;
