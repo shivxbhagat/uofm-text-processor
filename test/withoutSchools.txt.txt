@@ -9,26 +9,6 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <meta name=ProgId content=Word.Document>
 <meta name=Generator content="Microsoft Word 15">
 <meta name=Originator content="Microsoft Word 15">
-<link rel=File-List
-href="file:///C:/Users/bhagats1/AppData/Local/Temp/msohtmlclip1/01/clip_filelist.xml">
-<link rel=Edit-Time-Data
-href="file:///C:/Users/bhagats1/AppData/Local/Temp/msohtmlclip1/01/clip_editdata.mso">
-<!--[if !mso]>
-<style>
-v\:* {behavior:url(#default#VML);}
-o\:* {behavior:url(#default#VML);}
-w\:* {behavior:url(#default#VML);}
-.shape {behavior:url(#default#VML);}
-</style>
-<![endif]--><!--[if gte mso 9]><xml>
- <o:OfficeDocumentSettings>
-  <o:AllowPNG/>
- </o:OfficeDocumentSettings>
-</xml><![endif]-->
-<link rel=themeData
-href="file:///C:/Users/bhagats1/AppData/Local/Temp/msohtmlclip1/01/clip_themedata.thmx">
-<link rel=colorSchemeMapping
-href="file:///C:/Users/bhagats1/AppData/Local/Temp/msohtmlclip1/01/clip_colorschememapping.xml">
 <!--[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Normal</w:View>
@@ -1112,20 +1092,7 @@ mso-fareast-theme-font:minor-fareast;color:#002060;mso-no-proof:yes'><!--[if gte
   <v:f eqn="prod @7 21600 pixelHeight"/>
   <v:f eqn="sum @10 21600 0"/>
  </v:formulas>
- <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
- <o:lock v:ext="edit" aspectratio="t"/>
-</v:shapetype><v:shape id="Picture_x0020_2" o:spid="_x0000_i1025" type="#_x0000_t75"
- alt="Logo, company name&#10;&#10;Description automatically generated" style='width:112.8pt;
- height:52.2pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="file:///C:/Users/bhagats1/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png"
-  o:title="Logo, company name&#10;&#10;Description automatically generated"/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=150 height=70
-src="file:///C:/Users/bhagats1/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png"
-alt="Logo, company name&#10;&#10;Description automatically generated" v:shapes="Picture_x0020_2"><![endif]></span></span><span
-style='mso-bookmark:_MailAutoSig'><span style='font-size:9.0pt;font-family:
-"Arial",sans-serif;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:
-minor-fareast;color:#1F497D;mso-ligatures:none;mso-no-proof:yes'><o:p></o:p></span></span></p>
-
+ 
 <p class=MsoNormal><span style='mso-bookmark:_MailAutoSig'><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:Calibri;mso-bidi-font-family:
