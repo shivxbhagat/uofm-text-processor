@@ -201,6 +201,7 @@ function generateCourseTable(
 	return outputTable;
 }
 
+// used https://evercoder.github.io/clipboard-inspector/ to the html of the email from the original email
 function writeEmail(studentNumber, studentName, schoolNames, courseTable) {
 	if (
 		studentNumber !== undefined ||
