@@ -3,6 +3,8 @@
 html,
 body {
 	scroll-behavior: smooth;
+	color: #200800;
+	font-family: Roboto;
 }
 
 body {
@@ -27,16 +29,6 @@ textarea {
 	font-size: 1rem;
 }
 
-button {
-	padding: 14px 28px;
-	background-color: #4caf50;
-	color: white;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	font-size: 1em;
-}
-
 .header {
 	padding: 10px;
 	display: flex;
@@ -53,7 +45,7 @@ button {
 }
 
 .header i {
-	margin-left: 20px;
+	margin-left: 30px;
 	padding-top: 5px;
 	font-size: larger;
 }
@@ -62,84 +54,77 @@ button {
 	cursor: pointer;
 }
 
-.output-section {
-	background-color: #f2f2f2;
-}
-
-.generated-text-h2 {
-	margin-bottom: 0;
-}
-
-.info-for-copying {
-	margin-top: 0;
-	text-align: center;
-}
-
-.output-textarea {
-	width: 85%;
-	height: 70%;
-	padding: 10px;
-	margin-bottom: 20px;
-	background-color: rgb(255, 255, 255);
-	overflow: scroll;
-}
-
-#student-number-input {
-	width: 50%;
-	padding: 10px;
-	font-size: 1em;
-	margin-bottom: 20px;
-	text-align: left;
-	border: 1px solid rgb(49, 49, 49);
-}
-
 .btn-group {
 	margin-bottom: 0.75rem;
+}
+
+.button {
+	text-decoration: none;
+	font-size: 0.9411764706rem;
+	color: #200800;
+	font-weight: 500;
+	appearance: none;
+	border: none;
+	border-radius: 4px;
+	padding: 1em 1.5em;
+	background-color: #f2a900;
+	display: inline-block;
+	cursor: pointer;
+	transition: all 0.15s ease-in-out;
+	border-color: #f2a900;
+	text-align: center;
+	line-height: 1.1em;
+	font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+	min-width: 60px;
+}
+
+.button--blue {
+	background-color: #385e9d;
+	color: #fff;
+	border-color: #385e9d;
+}
+
+.button:hover {
+	background-color: #ffba1c;
+}
+
+.button--blue:hover {
+	background-color: #4370bb;
 }
 
 #input-section {
 	margin-bottom: 0.75rem;
 }
 
-td,
-th {
-	text-align: left;
-}
-
-table {
-	width: 1000px;
-	height: auto;
-	border-collapse: collapse;
-	overflow-x: auto;
-}
-
-/* td,th {
-  width: fit-content;
-  border: 1.5px solid black;
-} */
-
 footer {
-	background-color: #3b3b3b;
-	color: #fff;
+	background-color: #f1f1f1;
+	color: #200800;
 	text-align: center;
 	padding: 10px;
 	bottom: 0;
 	left: 0;
 }
 
-#a-github {
+#a-github,
+#a-email,
+#a-uofm {
 	text-decoration: none;
-	color: #fff;
+	color: #200800;
 	cursor: pointer;
-}
-
-#a-email {
-	text-decoration: none;
-	color: #fff;
-	cursor: pointer;
+	font-weight: bold;
+	text-decoration: underline;
+	transition: all 0.2s ease-in-out;
 }
 
 #a-github:hover,
-#a-email:hover {
-	color: #4caf50;
+#a-email:hover,
+#a-uofm:hover {
+	text-decoration: none;
+}
+
+#a-versions {
+	text-decoration: none;
+	color: #200800;
+	cursor: pointer;
+	font-weight: bold;
 }

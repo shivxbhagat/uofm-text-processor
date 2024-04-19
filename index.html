@@ -3,7 +3,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Text Processor</title>
+		<title>Text Processor - Evaluations</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./img/favicon-32x32.png"
+		/>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -11,13 +17,21 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="./src/style.css" />
 	</head>
 	<body>
 		<section id="input-section">
 			<div class="header">
 				<h1>Text Processor</h1>
-				<!-- <i class="fa-solid fa-circle-info" id="info-btn"></i> -->
+				<a href="./version.html" id="a-versions" target="_blank"
+					><i class="fa-solid fa-circle-info" id="info-btn"></i
+				></a>
 			</div>
 
 			<textarea
@@ -25,29 +39,14 @@
 				placeholder="Enter the text here"
 			></textarea>
 			<div class="btn-group">
-				<a href="#output-section"
-					><button id="generate-button">Generate</button></a
+				<a href="#" class="button" id="generate-button">Generate</a>
+				<a href="#" id="clear-button" class="button button--blue"
+					>Clear</a
 				>
-				<button id="clear-button">Clear</button>
 			</div>
 		</section>
-
-		<!-- <section id="output-section" class="output-section">
-			<h2 class="generated-text-h2">Generated Text</h2>
-			<br />
-			<h5 class="info-for-copying">
-				Copy from bottom of generated text to top (from ")" to first
-				character of School Name or Course Code)
-			</h5>
-			<div class="output-textarea" id="output-textarea">
-				<p class="generated-text" id="generated-text"></p>
-			</div>
-			<a href="#input-section">
-				<button id="clear-button">Clear</button></a
-			>
-		</section> -->
 		<footer>
-			&copy; 2023
+			Coded by
 			<a
 				href="https://github.com/shivxbhagat"
 				id="a-github"
@@ -57,6 +56,10 @@
 			| Email:
 			<a href="mailto:shivbhagat@icloud.com" id="a-email"
 				>shivbhagat@icloud.com</a
+			>
+			| Theme inspired from
+			<a href="https://www.umanitoba.ca" id="a-uofm" target="_blank"
+				>University of Manitoba's Website</a
 			>
 		</footer>
 		<script src="./src/script.js"></script>
