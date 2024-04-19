@@ -69,7 +69,7 @@ function generateEmail() {
 	}
 	schoolNames = schoolNames.slice(0, -2);
 
-	document.getElementById("generated-text").innerHTML = courseTable;
+	// document.getElementById("generated-text").innerHTML = courseTable;
 
 	//write email in new window
 	writeEmail(studentNumber, studentName, schoolNames, courseTable);
@@ -181,8 +181,6 @@ function writeEmail(studentNumber, studentName, schoolNames, courseTable) {
 
 	<body lang="EN-US" style="tab-interval: 0.5in; word-wrap: break-word">
 		<!--StartFragment-->
-
-		<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
 
 		<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
 
@@ -458,6 +456,7 @@ function writeEmail(studentNumber, studentName, schoolNames, courseTable) {
 						background: #ddebf7;
 						padding: 0in 5.4pt 0in 5.4pt;
 						height: 15pt;
+						vertical-align: top;
 					"
 				>
 					<p class="MsoNormal" style="line-height: 105%">
@@ -1113,6 +1112,11 @@ function writeEmail(studentNumber, studentName, schoolNames, courseTable) {
 	</body>
 </html>
 `);
+
+		//close the email-window after 1 minute : 60s
+		setTimeout(() => {
+			email.close();
+		}, 60000);
 	}
 }
 
