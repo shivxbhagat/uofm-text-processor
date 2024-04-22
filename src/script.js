@@ -172,7 +172,7 @@ function generateCourseTable(
 	) {
 		for (let i = 0; i <= schoolCounter; i++) {
 			outputTable +=
-				'<table style = "width: 1000px;height: auto;border-collapse: collapse;overflow-x: auto;text-align: left;"><tr><th colspan="2" style="text-align: left"><b><u>' +
+				'<table style = "width: 1000px;height: auto;border-collapse: collapse;overflow-x: auto;text-align: left;"><tr><th colspan="2" style="text-align:left"><b><u>' +
 				schoolVsCourseFiltered[i][0][1] +
 				"</u></b></th></tr>"; //school name
 			let j = 1;
