@@ -23,7 +23,8 @@ let studentNumber = "000000000",
 	hasStudentNumber = false,
 	hasStudentName = false,
 	emailText = ``,
-	schoolNames = "";
+	schoolNames = "",
+	emptyStr = "";
 
 function generateEmail() {
 	inputText = document.getElementById("input-textarea").value;
@@ -506,7 +507,7 @@ function writeEmail(studentNumber, studentName, schoolNames, courseTable) {
 											mso-ligatures: none;
 											mso-no-proof: yes;
 										"
-										><o:p>&nbsp;</o:p></span
+										><o:p><b>${emptyStr}</b></o:p></span
 									></b
 								></span
 							>
@@ -567,7 +568,7 @@ function writeEmail(studentNumber, studentName, schoolNames, courseTable) {
 											mso-ligatures: none;
 											mso-no-proof: yes;
 										"
-										><o:p>&nbsp;</o:p></span
+										><o:p><b>${emptyStr}</b></o:p></span
 									></b
 								></span
 							>
@@ -685,7 +686,7 @@ function writeEmail(studentNumber, studentName, schoolNames, courseTable) {
 											mso-ligatures: none;
 											mso-no-proof: yes;
 										"
-										><o:p>&nbsp;</o:p></span
+										><o:p><b>${emptyStr}</b></o:p></span
 									></b
 								></span
 							>
