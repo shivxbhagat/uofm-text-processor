@@ -7,9 +7,23 @@ document
 	.addEventListener("click", generateEmail);
 document.getElementById("clear-button").addEventListener("click", clearData);
 
+//hide back to top when its in the #input-section
+window.onscroll = function () {
+	if (
+		document.body.scrollTop > 100 ||
+		document.documentElement.scrollTop > 100
+	) {
+		document.getElementById("back-to-top").style.display = "block";
+	} else {
+		document.getElementById("back-to-top").style.display = "none";
+	}
+};
+
+document.getElementById("back-to-top").addEventListener("click", clearData);
+
 function clearData() {
 	document.getElementById("input-textarea").value = "";
-	document.getElementById("generated-text").innerHTML = "";
+	document.getElementById("output-email").innerHTML = "";
 }
 
 let studentNumber = "000000000",
@@ -307,8 +321,6 @@ function writeEmail(studentNumber, studentName, schoolNames, courseTable) {
 	
 		<body lang="EN-US" style="tab-interval: 0.5in; word-wrap: break-word">
 			<!--StartFragment-->
-	
-			<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
 	
 			<table
 				class="MsoNormalTable"
@@ -1239,25 +1251,12 @@ function writeEmail(studentNumber, studentName, schoolNames, courseTable) {
 				></span>
 			</p>
 	
-			<p class="MsoNormal">
-				<span style="mso-bookmark: _MailAutoSig"
-					><span
-						lang="EN-CA"
-						style="
-							mso-fareast-font-family: 'Times New Roman';
-							mso-fareast-theme-font: minor-fareast;
-							mso-ligatures: none;
-							mso-ansi-language: EN-CA;
-							mso-no-proof: yes;
-						"
-						><o:p>&nbsp;</o:p></span
-					></span
-				>
-			</p>
-	
 			<!--EndFragment-->
 		</body>
 	</html>`;
+
+		//suspend as of now
+		/*
 		let email = window.open("", "_blank", "width=1200,height=800");
 		email.document.write(html);
 
@@ -1265,5 +1264,8 @@ function writeEmail(studentNumber, studentName, schoolNames, courseTable) {
 		setTimeout(() => {
 			email.close();
 		}, 45000);
+		*/
+
+		document.getElementById("output-email").innerHTML = html;
 	}
 }

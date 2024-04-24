@@ -21,6 +21,10 @@ section {
 	align-items: center;
 }
 
+#input-section {
+	background-color: #f1f1f1;
+}
+
 textarea {
 	width: 85%;
 	height: 70%;
@@ -127,4 +131,44 @@ footer {
 	color: #200800;
 	cursor: pointer;
 	font-weight: bold;
+}
+
+#output-email {
+	height: 100%;
+	width: 96%;
+	margin: 2% 4%;
+	overflow-y: scroll;
+}
+
+.generated-text-h2 {
+	margin-bottom: 0;
+	text-decoration: underline;
+}
+
+#back-to-top {
+	position: fixed;
+	bottom: 60px;
+	right: 20px;
+	background-color: #4f2c1d;
+	color: white;
+	border: none;
+	border-radius: 15%;
+	padding: 10px;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+#back-to-top:hover {
+	background-color: #734a39;
+}
+
+#input-section,
+footer,
+.generated-text-h2,
+.h2-below-br,
+#back-to-top {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
