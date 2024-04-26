@@ -66,6 +66,7 @@ function generateEmail() {
 	if (studentNumber === "000000000") {
 		alert("Enter valid input text");
 		clearData();
+		location.reload();
 		return;
 	}
 
@@ -90,10 +91,8 @@ function generateEmail() {
 	}
 	schoolNames = schoolNames.slice(0, -2);
 
-	// document.getElementById("generated-text").innerHTML = courseTable;
-
 	//write email in new window
-	writeEmail(studentNumber, studentName, schoolNames, courseTable);
+	writeEmail(studentNumber, studentName, schoolNames, courseTable, emptyStr);
 }
 
 function trimCourseData(coursesData) {
@@ -217,20 +216,26 @@ function generateCourseTable(
 }
 
 // used https://evercoder.github.io/clipboard-inspector/ to the html of the email from the original email
-function writeEmail(studentNumber, studentName, schoolNames, courseTable) {
+function writeEmail(
+	studentNumber,
+	studentName,
+	schoolNames,
+	courseTable,
+	emptyStr
+) {
 	if (
 		studentNumber !== undefined ||
 		studentName !== undefined ||
 		schoolNames !== undefined ||
-		courseTable !== undefined
+		courseTable !== undefined ||
+		emptyStr !== undefined
 	) {
 		let html = `<html
 		xmlns:v="urn:schemas-microsoft-com:vml"
 		xmlns:o="urn:schemas-microsoft-com:office:office"
 		xmlns:w="urn:schemas-microsoft-com:office:word"
 		xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
-		xmlns="http://www.w3.org/TR/REC-html40"
-	>
+		xmlns="http://www.w3.org/TR/REC-html40">
 		<head>
 			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 			<meta name="ProgId" content="Word.Document" />
@@ -333,6 +338,7 @@ function writeEmail(studentNumber, studentName, schoolNames, courseTable) {
 					border-collapse: collapse;
 					mso-yfti-tbllook: 1184;
 					mso-padding-alt: 0in 0in 0in 0in;
+					font-weight: bold;
 				"
 			>
 				<tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; height: 15pt">
@@ -519,7 +525,7 @@ function writeEmail(studentNumber, studentName, schoolNames, courseTable) {
 											mso-ligatures: none;
 											mso-no-proof: yes;
 										"
-										><o:p><b>${emptyStr}</b></o:p></span
+										><o:p>${emptyStr}</o:p></span
 									></b
 								></span
 							>
@@ -580,7 +586,7 @@ function writeEmail(studentNumber, studentName, schoolNames, courseTable) {
 											mso-ligatures: none;
 											mso-no-proof: yes;
 										"
-										><o:p><b>${emptyStr}</b></o:p></span
+										><o:p>${emptyStr}</o:p></span
 									></b
 								></span
 							>
@@ -698,7 +704,7 @@ function writeEmail(studentNumber, studentName, schoolNames, courseTable) {
 											mso-ligatures: none;
 											mso-no-proof: yes;
 										"
-										><o:p><b>${emptyStr}</b></o:p></span
+										><o:p>${emptyStr}</o:p></span
 									></b
 								></span
 							>

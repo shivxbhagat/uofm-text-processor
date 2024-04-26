@@ -158,6 +158,10 @@ footer {
 	transition: all 0.2s ease-in-out;
 }
 
+#back-to-top i {
+	font-size: 1.4rem;
+}
+
 #back-to-top:hover {
 	background-color: #734a39;
 }
