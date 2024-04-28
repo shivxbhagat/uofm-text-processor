@@ -140,7 +140,7 @@ footer {
 	overflow-y: scroll;
 }
 
-.generated-text-h2 {
+#generated-text-h2 {
 	margin-bottom: 0;
 	text-decoration: underline;
 }
@@ -169,9 +169,10 @@ footer {
 #input-section,
 #input-textarea,
 footer,
-.generated-text-h2,
+#generated-text-h2,
 .h2-below-br,
-#back-to-top {
+#back-to-top,
+#info-for-copying {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
