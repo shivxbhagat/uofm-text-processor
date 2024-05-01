@@ -24,6 +24,7 @@ document.getElementById("back-to-top").addEventListener("click", clearData);
 function clearData() {
 	document.getElementById("input-textarea").value = "";
 	document.getElementById("output-email").innerHTML = "";
+	resetVariables();
 }
 
 let studentNumber = "000000000",
@@ -40,7 +41,24 @@ let studentNumber = "000000000",
 	schoolNames = "",
 	emptyStr = "";
 
+function resetVariables() {
+	studentNumber = "000000000";
+	studentName = "";
+	inputText = "";
+	coursesData = [];
+	schoolVsCourse = [];
+	schoolVsCourseFiltered = [];
+	courseTable = "";
+	schoolCounter = -1;
+	hasStudentNumber = false;
+	hasStudentName = false;
+	emailText = ``;
+	schoolNames = "";
+	emptyStr = "";
+}
+
 function generateEmail() {
+	resetVariables();
 	inputText = document.getElementById("input-textarea").value;
 
 	let splitText = inputText.split("\n");
@@ -63,7 +81,12 @@ function generateEmail() {
 		}
 	}
 
-	if (studentNumber === "000000000") {
+	if (
+		studentNumber === "000000000" ||
+		studentName === "" ||
+		studentNumber === "" ||
+		studentNumber.length !== 9
+	) {
 		alert("Enter valid input text");
 		clearData();
 		location.reload();
@@ -186,7 +209,7 @@ function generateCourseTable(
 	) {
 		for (let i = 0; i <= schoolCounter; i++) {
 			outputTable +=
-				'<table style = "width: 1000px;height: auto;border-collapse: collapse;overflow-x: auto;text-align: left;"><tr><th colspan="2" style="text-align:left"><b><u>' +
+				'<table style = "font-family: Roboto;width: 1000px;height: auto;border-collapse: collapse;overflow-x: auto;text-align: left;"><tr><th colspan="2" style="text-align:left"><b><u>' +
 				schoolVsCourseFiltered[i][0][1] +
 				"</u></b></th></tr>"; //school name
 			let j = 1;
