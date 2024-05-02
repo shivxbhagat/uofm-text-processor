@@ -116,6 +116,13 @@ function generateEmail() {
 
 	//write email in new window
 	writeEmail(studentNumber, studentName, schoolNames, courseTable, emptyStr);
+
+	//clear after 1.5 minutes
+	setTimeout(reload, 90000);
+}
+
+function reload() {
+	document.getElementById("back-to-top").click();
 }
 
 function trimCourseData(coursesData) {
