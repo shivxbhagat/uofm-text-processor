@@ -253,18 +253,8 @@ function writeEmail(
 		courseTable !== undefined ||
 		emptyStr !== undefined
 	) {
-		let html = `<html
-		xmlns:v="urn:schemas-microsoft-com:vml"
-		xmlns:o="urn:schemas-microsoft-com:office:office"
-		xmlns:w="urn:schemas-microsoft-com:office:word"
-		xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
-		xmlns="http://www.w3.org/TR/REC-html40">
+		let html = `<html>
 		<head>
-			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-			<meta name="ProgId" content="Word.Document" />
-			<meta name="Generator" content="Microsoft Word 15" />
-			<meta name="Originator" content="Microsoft Word 15" />
-			
 			<style>
 				/* Font Definitions */
 				@font-face {
