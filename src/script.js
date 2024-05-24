@@ -118,7 +118,7 @@ function generateEmail() {
 	writeEmail(studentNumber, studentName, schoolNames, courseTable, emptyStr);
 
 	//clear after 1.5 minutes
-	setTimeout(reload, 90000);
+	setTimeout(reload, 1.5 * 60 * 1000);
 }
 
 function reload() {
