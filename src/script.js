@@ -245,7 +245,7 @@ function generateCourseTable(
 	return outputTable;
 }
 
-// used https://evercoder.github.io/clipboard-inspector/ to the html of the email from the original email
+// used https://evercoder.github.io/clipboard-inspector/ to the get html code of the email from the original email
 function writeEmail(
 	studentNumber,
 	studentName,
